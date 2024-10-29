@@ -1,0 +1,13 @@
+<mat-grid-list [cols]="colsDesktop" [rowHeight]="rowHeight">
+    <mat-grid-tile *ngFor="let product of data">
+           <mat-card class="card" >
+                <img mat-card-image class="card-image" src="{{product.image}}" >
+                <mat-icon [style.color]="product.isFavorite?'red':'black'" class="mat-icon-lg icon" 
+                (click)="!product.isFavorite?addProductToFavorites(product):removeProductToFavorites(product)" >favorite</mat-icon>
+                <mat-card-content class="card-content">
+                    <mat-card-title>{{product.name}}</mat-card-title>
+                    <mat-card-subtitle>{{product.price | currency:'USD':'symbol':'1.2-2'}}</mat-card-subtitle>
+                </mat-card-content>
+           </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

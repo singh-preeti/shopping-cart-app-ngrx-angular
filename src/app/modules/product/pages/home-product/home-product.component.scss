@@ -1,0 +1,46 @@
+.card {
+    height: 300px;
+    text-overflow: ellipsis;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    margin: 20px;
+}
+
+.card:hover {
+    margin-left: 50px;
+}
+  
+.card-image {
+    height: 80%;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.card-content {
+    height: 20%;
+}
+
+mat-card-title:first-child {
+  font-size: 17px !important;
+  max-width: 250px;
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+mat-card-subtitle {
+    font-weight: 800;
+    font-size: 20px !important;
+}
+
+.icon{
+    position: absolute;
+    top: 70%;
+    left: 85%;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: red;
+}

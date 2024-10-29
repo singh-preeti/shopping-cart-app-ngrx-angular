@@ -1,0 +1,7 @@
+<div class="header" >
+    <h1 class="title_shop_hearder" (click)="redirectToHome()"  >Shopping</h1>
+    <h2 class="title_header">{{title}}</h2>
+    <span class="icon_favorite_header" (click)="redirectToHomeFavoritesProductsPage()" >
+        <mat-icon [style.color]="'red'" matBadge="{{(favoritesProducts | async)?.length}}" matBadgePosition="above after">favorite</mat-icon>
+    </span>
+</div>

@@ -1,0 +1,22 @@
+
+
+.header{
+    background-color: darkslategray;
+    display: flex;
+    margin: 0px 0px 25px 0px;
+    padding: 10px 0px 10px 0px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: #fff;
+}
+
+.title_shop_hearder{
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.icon_favorite_header {
+    margin-right: 15px;
+    cursor: pointer;
+}

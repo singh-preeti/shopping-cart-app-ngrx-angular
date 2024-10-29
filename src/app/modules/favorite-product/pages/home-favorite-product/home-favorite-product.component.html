@@ -1,0 +1,14 @@
+<app-header-favorite-product *ngIf="data?.length" (clickClearEvent)="clearFavoriteList()" ></app-header-favorite-product>
+<mat-grid-list [cols]="colsDesktop" [rowHeight]="rowHeight">
+    <mat-grid-tile *ngFor="let product of data">
+           <mat-card class="card" >
+                <img mat-card-image class="card-image" src="{{product.image}}" >
+                <mat-icon  class="mat-icon-md icon" title="remove product of the favorites" 
+                (click)="removeProductFavorites(product)" >delete</mat-icon>
+                <mat-card-content class="card-content">
+                    <mat-card-title>{{product.name}}</mat-card-title>
+                    <mat-card-subtitle>{{product.price | currency:'USD':'symbol':'1.2-2'}}</mat-card-subtitle>
+                </mat-card-content>
+           </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
